@@ -26,6 +26,9 @@ async def pedidos(message):
     curso = ' '.join(message.text.split()[1:])
     if curso == '':
         await bot.send_message(message.chat.id, "Por favor, digite o nome do curso que você deseja pedir.")
+    elif message.from_user.id == None:
+        await bot.reply_to(message, f"Você não definiu um @ de usuario, dessa forma, o administrador não consegue te marcar caso ache o seu conteudo, defina um @ e peça novamente")
+
     else:    
         await bot.reply_to(message, f"Você enviou o seu pedido do curso: *{curso}* Um administrador foi notificado. Você será marcado assim que o curso estiver disponivel  ✅")
         await bot.send_message(adm, f"Um novo pedido foi enviado pelo usuário {message.from_user.username} com o curso *{curso}*")
