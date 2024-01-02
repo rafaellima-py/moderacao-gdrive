@@ -10,7 +10,7 @@ pedido_registro = {
     }
 
 
-token = '6807148873:AAFcdWqzJgp1fHqOnudKf_dA5hPB3QEfUDI'                 #'6911261815:AAEk1_jZTeCZR_EiYXNP0d2FBKK_qwQ900A'
+token = '6911261815:AAEk1_jZTeCZR_EiYXNP0d2FBKK_qwQ900A'  
 bot = AsyncTeleBot(token)
 adm = '673195223'
 
